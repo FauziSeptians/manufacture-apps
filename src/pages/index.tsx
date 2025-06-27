@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import products from "@/data/product.json";
 import team from "@/data/team.json";
@@ -78,15 +77,6 @@ const heroSubtitle : any = {
         opacity: 1,
         y: 0,
         transition: { duration: 0.6, ease: "easeOut" },
-    },
-};
-
-const heroButton : any = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-        opacity: 1,
-        scale: 1,
-        transition: { duration: 0.5, ease: "easeOut" },
     },
 };
 
@@ -488,7 +478,7 @@ Setiap jahitan bukan hanya hasil produksi, tetapi cerminan visi kami: menghadirk
                             variants={stagger}
                             className="grid grid-cols-2 md:grid-cols-4 gap-6"
                         >
-                            {team.map((member, index) => (
+                            {team.map((member) => (
                                 <motion.div
                                     key={member.id}
                                     variants={fadeInUp}
