@@ -6,6 +6,7 @@ import products from "@/data/product.json";
 import team from "@/data/team.json";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Metadata } from "next";
 
 // Animation variants
 const fadeInUp : any = {
@@ -79,6 +80,11 @@ const heroSubtitle : any = {
         transition: { duration: 0.6, ease: "easeOut" },
     },
 };
+
+export const metadata: Metadata = {
+  title: 'PT. Wartiwan Kreatif Nusantara',
+  description: 'PT. Wartiwan Kreatif Nusantara',
+}
 
 export default function Home() {
     const [showLess, setShowLess] = useState(true);
